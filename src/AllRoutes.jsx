@@ -1,31 +1,35 @@
-import React from 'react'
-import {BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import Resume from './components/Resume'
-import Basiri from "./data/basiri"
-import Mohammad from "./data"
-import Fayaz from "./data/fayaz"
+import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Resume from "./components/Resume";
+import Basiri from "./data/basiri";
+import Mohammad from "./data";
+import Fayaz from "./data/fayaz";
+import BabaHussain from "./data/BabaHussain";
 
 // import { routers } from './routes-config'
 // import basiri from './data/basiri'
 
-const Links = ()=>{
-    const styles = {
-        display: "flex",
-        padding: "20px",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        // minHeight: "100vh"
-    }
-    return <div style={styles}>
-        <Link to={`/${Mohammad.path}`}>{Mohammad.name}</Link>
-        <Link to={`/${Basiri.path}`}>{Basiri.name}</Link>
-        <Link to={`/${Fayaz.path}`}>{Fayaz.name}</Link>
+const Links = () => {
+  const styles = {
+    display: "flex",
+    padding: "20px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    // minHeight: "100vh"
+  };
+  return (
+    <div style={styles}>
+      <Link to={`/${Mohammad.path}`}>{Mohammad.name}</Link>
+      <Link to={`/${Basiri.path}`}>{Basiri.name}</Link>
+      <Link to={`/${Fayaz.path}`}>{Fayaz.name}</Link>
+      <Link to={`/${BabaHussain.path}`}>{BabaHussain.name}</Link>
     </div>
-}
+  );
+};
 
 function AllRoutes() {
-    return (
+  return (
     //   <BrowserRouter>
 
     //     <Routes>
@@ -35,16 +39,18 @@ function AllRoutes() {
     //         <Route  path="/resume" element={<Resume />} />
     //     </Routes>
     //     </BrowserRouter>
-        <Routes>  
-             {/* <Route path="/" element={<Links />} /> */}
-             <Route  path={`/`} element={<Resume {...Mohammad} />} />
-             <Route  path={`/${Mohammad.path}`} element={<Resume {...Mohammad} />} />
-             <Route  path={`/${Basiri.path}`} element={<Resume {...Basiri} />} />
-             <Route  path={`/${Fayaz.path}`} element={<Resume {...Fayaz} />} />
-
-        </Routes> 
-        
-    )
+    <Routes>
+      {/* <Route path="/" element={<Links />} /> */}
+      <Route path={`/`} element={<Resume {...Mohammad} />} />
+      <Route path={`/${Mohammad.path}`} element={<Resume {...Mohammad} />} />
+      <Route path={`/${Basiri.path}`} element={<Resume {...Basiri} />} />
+      <Route path={`/${Fayaz.path}`} element={<Resume {...Fayaz} />} />
+      <Route
+        path={`/${BabaHussain.path}`}
+        element={<Resume {...BabaHussain} />}
+      />
+    </Routes>
+  );
 }
 
-export default AllRoutes
+export default AllRoutes;
