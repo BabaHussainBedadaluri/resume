@@ -192,7 +192,7 @@ const Resume = React.forwardRef(
               </>
             ))}
           </Grid>
-          {/* <Grid item container direction="column">
+          <Grid item container direction="column">
             <Grid item>
               <Typography variant="h6">Personal Projects</Typography>
             </Grid>
@@ -214,7 +214,7 @@ const Resume = React.forwardRef(
                 </>
               ))}
             </Grid>
-          </Grid> */}
+          </Grid>
           <Grid item container direction="column">
             <Grid item>
               <Typography variant="h6">Education History</Typography>
